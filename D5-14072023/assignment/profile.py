@@ -1,0 +1,27 @@
+my_resume=[{'name':'azim',
+            'email':'star.azim776@gmail.com',
+            'mobile no':'6382902538',
+            'softskills':['word', 'excel'],
+            'hardskills': 'automobile_repair',
+            'educational qualification':[{'edu_level':'meenakshi matriculation school', 
+                                         'passed out in': 2017, 'percentage': 98},
+                                         {'diploma ': 'sankar polytechnic college',
+                                           'passed out in': 2020, 'percentage':85},
+                                         {'degree':'BE in mechanical engineering',
+                                          'passed out in': 2023,'percentage':87}],                         
+            'experience':[{'company name':'wabco', 'experience': 1.4, 'role':'junio technicion'},
+                          {'company name':'TCS', 'experience': 3, 'role': 'manager'}],
+            'projects':[{'name':'electric car using PVC pipe', 'year':2017},
+                         {'name':'brake drum deformation', 'year': 2023}],
+            'hobbies':['cricket', 'mobile gaming'],
+            'personal details': {'fathers name': 'bazeer ahamed',
+                                 'occupation':'shopkeeper', 
+                                 'languages known':['tamil', 'english'],
+                                 'DOB':'12.11.2001',
+                                 'gender':'male',
+                                 'marital status':'single',
+                                 'address':'6/46 big street, thittuvilai, nagercoil'},
+'Decleration': 'I here by declare the above informations are correct'}]
+           
+print(my_resume[0]['hobbies'])
+print(my_resume[0]['experience'][1]['company name'])
