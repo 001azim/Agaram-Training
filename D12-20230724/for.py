@@ -19,3 +19,5 @@ for i in mark:
     for j in  i['sub']:
         total+=j
     print(total)
+
+    
