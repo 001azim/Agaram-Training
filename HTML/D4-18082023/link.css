@@ -1,0 +1,37 @@
+
+
+.main{ width: 100px;
+border: 5px solid blue;
+height: 30cm;
+width:25cm;}
+.s{ height:4cm;
+    width:20cm;
+    margin-top: 2cm;
+    margin-left:2cm;
+    border: 5px solid green;}
+.ss{width:20cm;
+    height:10cm;
+    margin-top: 2cm;
+    margin-left:2cm;
+    border:5px solid brown;
+
+}
+.v{ text-align: ;
+    height: 2cm;
+    width:3cm;
+    margin-top: 2cm;
+    margin-left:2cm;
+    border: 3px solid red;
+    display:inline-block
+    }
+.x{height:4cm;
+    width:15cm;
+    margin-top: 1cm;
+    margin-left:2cm;
+    border: 5px solid rgb(189, 19, 180);}
+
+.y{height:4cm;
+    width:20cm;
+    margin-top: 2cm;
+    margin-right:2cm;
+    border: 5px solid green;}

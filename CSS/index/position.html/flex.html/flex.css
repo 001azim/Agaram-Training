@@ -1,0 +1,23 @@
+ul{
+
+    display: flex;
+    justify-content: center; 
+flex-wrap:wrap;
+gap:141px 83px;
+flex-direction:row;
+justify-content: center;
+}
+
+
+
+
+
+li{height: 20%;
+width: 20%;
+    display: inline-block;
+    border: 1px solid black;
+   background-color: aqua;
+}
+
+
+

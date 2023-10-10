@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <style>
+            *{text-align: center;}
+            #registry_input{display: none;}
+             /* #call{display: none;} */
+             #update{display: none;}
+        </style>
+        <script src="reg.js"></script>
+    </head>
+    <body>
+    <div id="welcome">
+        <h2 id="username">azim</h2>
+        <button type="button" onclick="logout()" >logout</button>
+    </div>
+    
+        <div id="loginform">
+        <h1>Login Page</h1>
+        <h3><b>Your email</b><input type="email" id="email"  required></h3>
+        <h3><b>password</b><input type="password" id="password"></h3>
+        <button id="button" type="button" onclick="login()">Login</button>
+        <button id="register" type="button" onclick="register()">Register</button>
+         </div>
+    <div id="registry_input">
+         <h2>Registration form</h2>
+        <h3><b>User Name<input type="text" id="new_user"></b></h3>
+        <h3><b>Your email</b><input type="email" id="new_email"></h3>
+        <h3><b>password</b><input type="password" id="new_password"></h3>
+        <button id="new_id" type="button" onclick="signup()">sign up</button>
+    </div>
+    <div id="name">
+    <button type="button" onclick="getname()"> user names</button>
+    </div>
+  
+<div id="call"> 
+    <button type="button" onclick="arrange()"> arrange</button>
+
+    <table>
+              <tr>
+             <th>Name</th>
+              <th>Email </th>
+                <th> update</th>
+                   <th>delete </th>
+         </tr>   
+             <tbody id='tablebody'> </tbody>  
+
+        </table>
+</div>
+
+<div id="update">
+
+    <h3> update name<input type="text" id="updatedname"/></h3>
+    <h3> update email<input type="email" id="updatedemail"/></h3>
+    <h3> update password<input type="password" id="updatedpassword"/></h3>
+<button type="button" onclick="call()"> confirm</button>
+
+</div>
+
+
+
+    </body>
+
+
+
+
+    <script>
+        checklogin()
+    </script>
+</html>
