@@ -118,24 +118,42 @@ for(i=0;i<resume_details[a].length;i++){
     
    
     html=html+`<h3>${resume_details[a][i]}</h3>`
+    
 }
 
-document.getElementById('edlist').innerHTML=html
+document.getElementById('edlist').innerHTML=JSON.stringify(html)
 
 display()
 
 
 }
 
+function set(){
+    
+    $.ajax({type:'POST',
+  url:'http://agaram.academy/api/action.php',
+  
+  data :
+{
+request :"create_resume",
+user :"azim",
+resume:{resume_details
+}},
+  success:  function(done){
+    console.log('list',done)
+alert('object assigned')
+    
+  },
+  error: function(error){
+console.log(error)
+  },
+})
+}
 
-// other function doesnot wait assynchronous
-// other function have to wait synchronous
 
 
 
- 
+function next(){
 
-// let l=['a','b','cv','d']
-// for (i=0;i<l.length;i++){
-//     console.log(i)
-// }
+    window.location="arrange.html"
+}
