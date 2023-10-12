@@ -31,64 +31,39 @@ function display(){
 
 
 
-function show(skill, skill_id){
+function show(key, id,lang){
 
-if(!resume_details[skill]){
+if(!resume_details[key]){
 
-   resume_details[skill]=[]
+   resume_details[key]=[]
   
 
  }
-//  if(skill){
-//     ed
-//  }
- resume_details[skill].push(document.getElementById(skill_id).value)
-document.getElementById(skill_id).value=""
+
+ resume_details[key].push(document.getElementById(id).value)
+document.getElementById(id).value=""
 display()
 
-    let h="";
-    for(i=0;i<resume_details[skill].length; i++){
+let h="";
+for(i=0;i<resume_details[key].length; i++){
 
-         h= h+`<tr><td>${resume_details[skill][i]}</td>
-         <td> <button type="button" class="btn btn-danger" onclick="del('${resume_details[skill][i]}','${skill}','${skill_id}')">Delete</button></td>
-         </tr>`
-         
-        
-    }
-
-  
-   document.getElementById('list').innerHTML=h
-
-
-
+     h= h+`<tr id='${key[i]}' ><td>${resume_details[key][i]}</td>
+     <td > <button type="button" class="btn btn-danger" onclick="del('${[i]}','${key}')">Delete</button></td>
+     </tr>`
+    
+}
+document.getElementById(lang).innerHTML=h
+display() 
 }
 
-function del(a,skill,skill_id){
-   alert(a)
-    let ud=[]
-      
-     for(i=0;i<resume_details.skill.length;i++){
-        if(a!=resume_details.skill[i]){
-            ud.push(resume_details.skill[i])
+function del(ind,key){
+  resume_details[key].splice(ind,1)
+  console.log(resume_details[key])
+let x=  document.getElementById(key[ind])
+x.remove()
+  display()
+}
 
-  resume_details.skill=ud
-  // console.log('dert',ud)
-  // document.getElementById('empty').value=""
-        }
-
-        
-     }
-
-    show(skill,skill_id)
-     }
-  
-
-//      function delet(c){
-
-// resume_details.skill.splice(c)
-
-// remove(document.getElementById('li'))
-//      }
 
 
 function add(a){
@@ -115,19 +90,18 @@ resume_details[a].push(ed)
     
     ed={}
 
-// var html=''
-// for(i=0;i<resume_details[a].length;i++){
-    
-   
-//     html=html+`<h3>${resume_details[a][i]}</h3>`
-    
-// }
-
-// document.getElementById('edlist').innerHTML=JSON.stringify(html)
-
-// display()
-
-
+    let h=''
+    for (i=0;i<resume_details.education.length;i++){
+      h=h+` <tr id='${resume_details.education[i]}'>
+      <th scope="row">${resume_details.education[i].institution_name}</th>
+      <td>${resume_details.education[i].degree}</td>
+      <td>${resume_details.education[i].year}</td>
+      <td>${resume_details.education[i].percentage}</td>
+      <td><button type="button" class="btn btn-warning" onclick="remove('${[i]}','${resume_details.education[i]}')">delete</button></td>
+    </tr>`
+    }
+document.getElementById('t_body').innerHTML=h
+display()
 }
 
 function set(){
@@ -146,6 +120,7 @@ function set(){
 
   
     next()
+    get()
   },
   error: function(error){
 console.log(error)
@@ -156,8 +131,20 @@ console.log(error)
 
 
 
-
 function next(){
 
     window.location="arrange.html"
+}
+
+
+function remove(a,id){
+  // alert(id)
+
+resume_details.education.splice(a)
+console.log(resume_details.education)
+let x=document.getElementById(id)
+x.remove()
+display()
+
+
 }

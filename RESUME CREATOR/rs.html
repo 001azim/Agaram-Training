@@ -55,7 +55,7 @@
                                     <div class="mb-3">
                                         <label for="exampleFormControlInput1" class="form-label">skills</label>
                                         <input type="text" class="form-control"  id='skil'>
-                                        <button type="button" class="btn btn-secondary" onclick="show('skill','skil')">Add</button>
+                                        <button type="button" class="btn btn-secondary" onclick="show('skill','skil','list')">Add</button>
                                       </div>
                                       <table class="table">
                                         <thead>
@@ -66,13 +66,25 @@
                                         </thead>
                                         <tbody id="list"></tbody>
                                       </table>
-                        
+<h3>languages</h3>                       
                                       <div class="col"> 
                                         <div class="mb-3">
-                                            <label for="exampleFormControlInput1" class="form-label">languages</label>
+                                           
                                             <input type="text" class="form-control"  id='lang_id'>
-                                            <button type="button" class="btn btn-secondary" onclick="show('lang','lang_id')">Add</button>
+                                            <button type="button" class="btn btn-secondary" onclick="show('lang','lang_id','lang')">Add</button>
                                           </div>
+
+                                          <table class="table">
+                                            <thead>
+                                              <tr>
+                                                <th scope="col">languages</th>
+                                                <th scope="col">delete</th>
+                                              </tr>
+                                            </thead>
+                                            <tbody id="lang"></tbody>
+                                          </table>
+
+
  <h3>education details</h3>
                                           <div class="col"> 
                                             <div class="mb-3">
@@ -99,8 +111,20 @@
                                                             <button type="button" class="btn btn-secondary" onclick="arrange('education')">Add</button>
                                                           </div>
                                               
-
+                                                          <table class="table">
+                                                            <thead>
+                                                              <tr>
+                                                                <th scope="col">institution name</th>
+                                                                <th scope="col">degree</th>
+                                                                <th scope="col">year</th>
+                                                                <th scope="col">percentage</th>
+                                                                <th scope="col">delete</th>
+                                                              </tr>
+                                                            </thead>
+                                                            <tbody id="t_body"></tbody>
                                             
+                                                              </table>
+                                  
                             
     
         </form>
