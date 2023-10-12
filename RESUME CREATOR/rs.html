@@ -57,6 +57,15 @@
                                         <input type="text" class="form-control"  id='skil'>
                                         <button type="button" class="btn btn-secondary" onclick="show('skill','skil')">Add</button>
                                       </div>
+                                      <table class="table">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col">skills</th>
+                                            <th scope="col">delete</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody id="list"></tbody>
+                                      </table>
                         
                                       <div class="col"> 
                                         <div class="mb-3">
@@ -105,16 +114,15 @@
 
    
    
-
-    <div id="list">
-        <h2> </h2>
-    </div>
+    
+    
+  
 
     <div id="edlist">
       <h2></h2>
   </div>
   <button type="button" class="btn btn-primary" onclick="set()">sumbit</button>
-  <button type="button" class="btn btn-secondary" onclick="next()">next page</button>
+  <!-- <button type="button" class="btn btn-secondary" onclick="next()">next page</button> -->
   
 </body>
 <script src="rs.js"></script>

@@ -6,12 +6,14 @@
     <table class="table">
         <thead>
           <tr>
-            <th scope="col-4">name</th>
-            <th scope="col-4">id</th>
-            <th scope="col-4">delete</th>
+            <th scope="col">name</th>
+            <th scope="col">id</th>
+            <th scope="col">delete</th>
+             <th scope="col">link</th>
           </tr>
         </thead>
         <tbody id="table_body"></tbody>
+      </table>
 
 </head>
 
@@ -45,6 +47,7 @@ for(let i=0; i<list.data.length;i++){
       <th scope="row">${list.data[i].user}</th>
       <td> ${list.data[i].id}</td>
       <td <button type="button" class="btn btn-primary" onclick="rem('${list.data[i].id}')">remove</button></td>
+      <td> <a href="single.html?id=${list.data[i].id}"> list</a></td>
     </tr>`
 
 
@@ -62,7 +65,8 @@ console.log(error)
 function rem(a){
 
 
-$.ajax({type:'get',
+$.ajax({
+    type:'get',
 url:'http://agaram.academy/api/action.php',
 data :
 {
@@ -72,20 +76,27 @@ id:a
 },
 success: function(success){
     console.log(success)
-    alert('deleted')
+    
 },
 error: function(error){
         console.log(error)
 }
 })
 
-get()
+ get()
 }
 
 
 function back(){
     window.location="rs.html"
 }
+
+
+function lst(){
+
+
+}
+
 
 </script>
 

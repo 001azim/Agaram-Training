@@ -49,9 +49,11 @@ display()
     let h="";
     for(i=0;i<resume_details[skill].length; i++){
 
-         h= h+`<div id="lim"> <h5>${resume_details[skill][i]}</h5><button type="button" class="btn btn-primary" onclick="del('${resume_details.skill[i]}')">
-         delete <span class="badge text-bg-secondary"></span>
-       </button></div>`
+         h= h+`<tr><td>${resume_details[skill][i]}</td>
+         <td> <button type="button" class="btn btn-danger" onclick="del('${resume_details[skill][i]}','${skill}','${skill_id}')">Delete</button></td>
+         </tr>`
+         
+        
     }
 
   
@@ -61,24 +63,24 @@ display()
 
 }
 
-// function del(a){
-   
-//     let ud=[]
+function del(a,skill,skill_id){
+   alert(a)
+    let ud=[]
       
-//      for(i=0;i<resume_details.skill.length;i++){
-//         if(a!=resume_details.skill[i]){
-//             ud.push(resume_details.skill[i])
+     for(i=0;i<resume_details.skill.length;i++){
+        if(a!=resume_details.skill[i]){
+            ud.push(resume_details.skill[i])
 
+  resume_details.skill=ud
+  // console.log('dert',ud)
+  // document.getElementById('empty').value=""
+        }
 
-//         }
+        
+     }
 
-//         break
-//      }
-  
-//      x=document.getElementById('lim').value
-// console.log(x)
-
-//      }
+    show(skill,skill_id)
+     }
   
 
 //      function delet(c){
@@ -113,17 +115,17 @@ resume_details[a].push(ed)
     
     ed={}
 
-var html=''
-for(i=0;i<resume_details[a].length;i++){
+// var html=''
+// for(i=0;i<resume_details[a].length;i++){
     
    
-    html=html+`<h3>${resume_details[a][i]}</h3>`
+//     html=html+`<h3>${resume_details[a][i]}</h3>`
     
-}
+// }
 
-document.getElementById('edlist').innerHTML=JSON.stringify(html)
+// document.getElementById('edlist').innerHTML=JSON.stringify(html)
 
-display()
+// display()
 
 
 }
@@ -134,20 +136,22 @@ function set(){
   url:'http://agaram.academy/api/action.php',
   
   data :
-{
-request :"create_resume",
-user :"azim",
-resume:{resume_details
-}},
+  {
+    request :"create_resume",
+    user :"azim",
+    resume:resume_details
+  },
   success:  function(done){
-    console.log('list',done)
-alert('object assigned')
-    
+    console.log('list',JSON.parse(done))
+
+  
+    next()
   },
   error: function(error){
 console.log(error)
   },
 })
+
 }
 
 
