@@ -7,8 +7,7 @@ function run(a,pd)
 {
 if(pd){
     if(resume_details[pd]){
-resume_details[pd]= {...resume_details[pd]
-    }
+resume_details[pd]= {...resume_details[pd]}
 
    }
 
@@ -119,7 +118,8 @@ function set(){
     console.log('list',JSON.parse(done))
 
   
-    next()
+    next
+    ()
     get()
   },
   error: function(error){

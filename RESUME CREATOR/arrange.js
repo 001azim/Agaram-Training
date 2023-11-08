@@ -48,7 +48,7 @@ $('#phone').html(x.phone_number)
 // console.log('lang',x.personal_details)
 let h=""
 for(let i=0;i<x.skill.length;i++){
-h=h+`<li>${x.skill[i]}</li>`
+h=h+`<li> &#10022;${x.skill[i]}</li>`
 
 
 }
@@ -57,7 +57,7 @@ $('#skill').html(h)
 ht=""
 
 for(let i=0;i<x.lang.length;i++){
-ht=ht+`<li>${x.lang[i]}</li>`
+ht=ht+`<li>&#11088;${x.lang[i]}</li>`
 
 }
 $('#lang').html(ht)
@@ -69,10 +69,10 @@ let html_data=''
 for(let i=0;i<x.education.length;i++){
     console.log(x.education[i].institution_name)
 html_data=html_data+`    <tr>
-<th scope="row">${x.education[i].institution_name}</th>
-<td>${x.education[i].degree}</td>
-<td>${x.education[i].year}</td>
-<td>${x.education[i].percentage}</td>
+<th class="table table-bordered border-primary">${x.education[i].institution_name}</th>
+<td class="table table-bordered border-primary">${x.education[i].degree}</td>
+<td class="table table-bordered border-primary">${x.education[i].year}</td>
+<td class="table table-bordered border-primary">${x.education[i].percentage}</td>
 </tr>`
 }
 $('#test').html(html_data)

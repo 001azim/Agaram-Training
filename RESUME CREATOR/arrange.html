@@ -9,7 +9,8 @@
             <th scope="col">name</th>
             <th scope="col">id</th>
             <th scope="col">delete</th>
-             <th scope="col">link</th>
+             <th scope="col">template 1</th>
+             <th scope="col">template 2</th>
           </tr>
         </thead>
         <tbody id="table_body"></tbody>
@@ -47,7 +48,8 @@ for(let i=0; i<list.data.length;i++){
       <th scope="row">${list.data[i].user}</th>
       <td> ${list.data[i].id}</td>
       <td <button type="button" class="btn btn-primary" onclick="rem('${list.data[i].id}')">remove</button></td>
-      <td> <a href="single.html?id=${list.data[i].id}"> list</a></td>
+      <td> <a href="single.html?id=${list.data[i].id}"> template 1</a> </td>
+      <td> <a href="cg.html?id=${list.data[i].id}"> template 2</a></td>
     </tr>`
 
 
@@ -90,7 +92,6 @@ error: function(error){
 function back(){
     window.location="rs.html"
 }
-
 
 function lst(){
 
