@@ -1,55 +1,30 @@
 
 import './App.css';
 import Prc from './prc'
-import {useState} from 'react'
-
+import {useState,useEffect} from 'react'
+import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 
 function App() {
 
+const router=createBrowserRouter([{
 
-  const del=(x)=>{
-   let uplist=todo.filter((y,m)=>x!=m+1)
-   run(uplist)
+path:'./prc'
 
-  
-  }
- 
-  let [val,fun] = useState('')
-  let [todo,run] = useState([])
+
+}])
+
+
+const run=()=>{
+
+
+
+}
+
 
   return (
-    
-    <div className="App">
-      <header className="App-header">
-<>
-<table border="solid 3px white">
-<tr>
-<th> order</th>
-<th>action</th>
-<th>delete</th>
-</tr>
 
-{todo.map((x,i)=>
-<tr>
-<th>{i+1}</th>
-<th> {x}</th>
-<th>{<button onClick={()=>del(i+1)}> delete</button>}</th>
-</tr>)}
-
-</table>
-
-     
-    <input type="text" onClick={(e)=>fun(e.target.value)}/>
-    <button onClick={()=>run([...todo,...val])}> add</button>
-
-    {todo} 
-    </>    
-        {/* <Prc name="mohamed"/> */}
-   
-      </header>
-    </div>
-   
-  );
+  <button onClick={()=>run()}> test</button>
+  )
 }
 
 export default App;

@@ -1,10 +1,10 @@
-import { useState } from "react"
+import { useState,useEffect  } from "react"
 import { Button } from "react-bootstrap"
 import {Call} from './input'
 import Container from 'react-bootstrap/Container';
 import Table from 'react-bootstrap/Table';
 import { useNavigate, Link } from "react-router-dom";
-
+import axios from "axios";
 
 function User(props){
 
@@ -22,8 +22,21 @@ const del=(x)=>{
     setvalue(updatedlist)
 }
 
-const checklogin=()=> {if(logindata.email=="azim@gmail.com"&&logindata.password==12345){
-  
+const checklogin=()=> {
+//   axios({
+//     method: 'post',
+//     url: 'http://agaram.academy/api/action.php',
+//     data :{
+// request : 'candidate_login,',
+// email:logindata.email,
+// password:logindata.password
+// }
+   
+//   }).then (function(response){
+// console.log(response)
+// // jsetdata(response.data)
+//   })
+
  props.setlogged(true)
  props.setusername(logindata.email)
  navigate("/test")
@@ -31,13 +44,7 @@ const checklogin=()=> {if(logindata.email=="azim@gmail.com"&&logindata.password=
 
 }
 
-
-else{
-alert("failed")
-
-}}
-
-
+useEffect(()=>{checklogin()},[user])
 
 return(
 

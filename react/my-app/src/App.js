@@ -1,4 +1,4 @@
-
+import axios from "axios";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import User from './name';
@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap';
 import Test from './test'
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
-
+import Timer from "./timer";
 
 
  function App() {
@@ -29,7 +29,11 @@ import { createBrowserRouter, RouterProvider,} from "react-router-dom";
     element:<Test islogged={islogged} setlogged={setlogged}
     username={username} setusername={setusername}
   />
-  },
+  },{
+path:'/timer',
+element:<Timer/>
+
+  }
   
   
   ])
